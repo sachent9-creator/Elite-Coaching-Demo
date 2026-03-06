@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jaipur Elite NEET & JEE Academy | Best Coaching in Jaipur</title>
+<meta name="description" content="Jaipur Elite NEET & JEE Academy — Best NEET and JEE Coaching in Jaipur. 500+ Selections. Expert Faculty. Book a Free Demo Class Today.">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Noto+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0A0F2C;--navy2:#0D1535;
+  --blue:#1A56DB;--blue-light:#3B82F6;
+  --electric:#00D4FF;--gold:#FFD700;
+  --orange:#FF6B00;--green:#10B981;
+  --white:#FFFFFF;--muted:#8899BB;
+  --border:rgba(59,130,246,0.18);--card:rgba(255,255,255,0.04);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Noto Sans',sans-serif;background:var(--navy);color:var(--white);overflow-x:hidden;}
+a{text-decoration:none;color:inherit;}
+
+/* WHATSAPP */
+.wa-float{position:fixed;bottom:88px;right:18px;z-index:9999;width:56px;height:56px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.55);transition:transform .2s;animation:wapulse 2.5s infinite;}
+.wa-float:hover{transform:scale(1.1);animation:none;}
+@keyframes wapulse{0%,100%{box-shadow:0 4px 20px rgba(37,211,102,.5);}50%{box-shadow:0 6px 36px rgba(37,211,102,.85);}}
+.wa-float svg{width:30px;height:30px;fill:white;}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:9000;background:rgba(10,15,44,.97);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);height:64px;padding:0 28px;display:flex;align-items:center;justify-content:space-between;gap:12px;}
+.nav-logo{font-family:'Sora',sans-serif;font-size:16px;font-weight:800;color:var(--white);line-height:1.15;flex-shrink:0;}
+.nav-logo .neet{color:#00D4FF;}.nav-logo .jee{color:#FFD700;}
+.nav-logo small{display:block;font-size:10px;font-weight:400;color:var(--muted);letter-spacing:1px;text-transform:uppercase;margin-top:2px;}
+.nav-links{display:flex;align-items:center;gap:22px;}
+.nav-links a{font-size:14px;font-weight:500;color:var(--muted);transition:color .2s;}
+.nav-links a:hover{color:var(--white);}
+.nav-right{display:flex;align-items:center;gap:10px;}
+.nav-cta{background:var(--blue);color:white;padding:10px 18px;border-radius:7px;font-family:'Sora',sans-serif;font-weight:700;font-size:14px;cursor:pointer;border:none;transition:background .2s;white-space:nowrap;}
+.nav-cta:hover{background:var(--blue-light);}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;}
+.hamburger span{display:block;width:22px;height:2px;background:var(--white);border-radius:2px;}
+.mob-menu{display:none;position:fixed;top:64px;left:0;right:0;z-index:8999;background:var(--navy2);border-bottom:2px solid var(--border);padding:20px 24px;flex-direction:column;gap:12px;box-shadow:0 8px 32px rgba(0,0,0,.4);}
+.mob-menu a,.mob-menu button{font-size:16px;font-weight:600;color:var(--muted);border:none;background:none;cursor:pointer;text-align:left;padding:7px 0;border-bottom:1px solid var(--border);}
+.mob-menu .mob-cta{background:var(--blue);color:white;padding:14px 20px;border-radius:8px;font-size:16px;font-weight:700;text-align:center;border:none;border-bottom:none;margin-top:4px;}
+.mob-menu.open{display:flex;}
+
+/* STRIP */
+.strip{background:linear-gradient(90deg,var(--blue) 0%,#0E3A8C 50%,var(--blue) 100%);padding:11px 32px;text-align:center;font-size:14px;font-weight:700;color:white;letter-spacing:.2px;margin-top:64px;}
+.strip span{opacity:.8;font-weight:400;}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;align-items:center;padding:80px 40px 64px;position:relative;overflow:hidden;}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 80% 40%,rgba(26,86,219,.18) 0%,transparent 70%),radial-gradient(ellipse 40% 40% at 10% 80%,rgba(0,212,255,.07) 0%,transparent 60%);pointer-events:none;}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(59,130,246,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(59,130,246,.05) 1px,transparent 1px);background-size:48px 48px;pointer-events:none;}
+.hero-content{max-width:680px;position:relative;z-index:1;}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(26,86,219,.2);border:1px solid rgba(26,86,219,.5);color:var(--electric);padding:6px 16px;border-radius:20px;font-size:13px;font-weight:600;margin-bottom:22px;}
+.hero h1{font-family:'Sora',sans-serif;font-size:clamp(28px,4.2vw,56px);font-weight:800;color:var(--white);line-height:1.12;margin-bottom:18px;}
+.hero h1 .hi-neet{color:var(--electric);}
+.hero h1 .hi-jee{color:var(--gold);}
+.hero-sub{color:var(--muted);font-size:17px;line-height:1.65;margin-bottom:14px;max-width:520px;}
+.proof-pills{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:30px;}
+.pill{font-size:13px;font-weight:700;padding:5px 14px;border-radius:20px;}
+.pill-green{background:rgba(16,185,129,.15);border:1px solid rgba(16,185,129,.35);color:var(--green);}
+.pill-gold{background:rgba(255,215,0,.12);border:1px solid rgba(255,215,0,.3);color:var(--gold);}
+.pill-blue{background:rgba(26,86,219,.2);border:1px solid rgba(26,86,219,.45);color:var(--electric);}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:30px;}
+.btn-primary{background:var(--blue);color:white;padding:16px 28px;border-radius:8px;font-family:'Sora',sans-serif;font-weight:700;font-size:16px;cursor:pointer;border:none;transition:all .2s;display:inline-flex;align-items:center;gap:8px;box-shadow:0 4px 24px rgba(26,86,219,.45);min-height:52px;}
+.btn-primary:hover{background:var(--blue-light);transform:translateY(-2px);}
+.btn-wa{background:#25D366;color:white;padding:16px 26px;border-radius:8px;font-family:'Sora',sans-serif;font-weight:700;font-size:16px;cursor:pointer;border:none;transition:all .2s;display:inline-flex;align-items:center;gap:8px;min-height:52px;}
+.btn-wa:hover{background:#1da851;transform:translateY(-2px);}
+.hero-trust{display:flex;flex-wrap:wrap;gap:18px;padding-top:22px;border-top:1px solid var(--border);}
+.ht-item{display:flex;align-items:center;gap:7px;font-size:13px;color:var(--muted);}
+.ht-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0;}
+.ht-dot.blue{background:var(--electric);}
+.ht-dot.gold{background:var(--gold);}
+
+/* EXAM TABS */
+.exam-tabs-section{background:var(--navy2);padding:52px 32px;}
+.exam-tabs{display:flex;gap:0;max-width:600px;margin:0 auto 36px;background:rgba(255,255,255,.05);border-radius:10px;border:1px solid var(--border);overflow:hidden;}
+.exam-tab{flex:1;padding:13px;font-family:'Sora',sans-serif;font-size:15px;font-weight:700;cursor:pointer;border:none;background:transparent;color:var(--muted);transition:all .2s;}
+.exam-tab.active-neet{background:rgba(0,212,255,.15);color:var(--electric);}
+.exam-tab.active-jee{background:rgba(255,215,0,.15);color:var(--gold);}
+.tab-content{display:none;max-width:800px;margin:0 auto;}
+.tab-content.active{display:block;}
+.exam-info-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+.exam-info-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:24px;}
+.exam-info-card h3{font-family:'Sora',sans-serif;font-size:16px;font-weight:700;margin-bottom:14px;}
+.exam-info-card.neet-card h3{color:var(--electric);}
+.exam-info-card.jee-card h3{color:var(--gold);}
+.info-list{list-style:none;display:flex;flex-direction:column;gap:8px;}
+.info-list li{display:flex;align-items:center;gap:10px;font-size:14px;color:rgba(255,255,255,.75);}
+.info-list li::before{content:'→';font-weight:800;flex-shrink:0;}
+.info-list li.neet-li::before{color:var(--electric);}
+.info-list li.jee-li::before{color:var(--gold);}
+
+/* SECTIONS COMMONS */
+.results-section,.faculty-section,.testi-section{background:var(--navy2);padding:72px 32px;}
+.courses-section,.whyus-section,.seo-section{background:var(--navy);padding:72px 32px;}
+.form-section{background:linear-gradient(135deg,var(--navy2),#0A1628);padding:72px 32px;position:relative;overflow:hidden;}
+.form-section::before{content:'';position:absolute;top:-120px;right:-120px;width:500px;height:500px;background:radial-gradient(circle,rgba(26,86,219,.1) 0%,transparent 70%);pointer-events:none;}
+.container{max-width:1100px;margin:0 auto;}
+.section-header{text-align:center;margin-bottom:52px;}
+.section-tag{display:inline-block;font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--electric);margin-bottom:10px;}
+.section-title{font-family:'Sora',sans-serif;font-size:clamp(24px,3vw,38px);font-weight:800;color:var(--white);line-height:1.2;}
+.section-sub{font-size:15px;color:var(--muted);margin-top:10px;max-width:520px;margin-left:auto;margin-right:auto;}
+
+/* RESULTS */
+.results-nums{display:grid;grid-template-columns:repeat(auto-fit,minmax(148px,1fr));gap:16px;max-width:980px;margin:0 auto 52px;}
+.rnum-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:24px 16px;text-align:center;position:relative;overflow:hidden;transition:all .3s;}
+.rnum-card:hover{border-color:var(--blue);transform:translateY(-3px);}
+.rnum-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--blue),var(--electric));}
+.rnum-card.gold-card::before{background:linear-gradient(90deg,var(--orange),var(--gold));}
+.rn-num{font-family:'Sora',sans-serif;font-size:clamp(28px,4vw,42px);font-weight:800;color:var(--electric);line-height:1;}
+.rnum-card.gold-card .rn-num{color:var(--gold);}
+.rn-lbl{font-size:12px;color:var(--muted);margin-top:6px;line-height:1.4;}
+.toppers-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;max-width:1100px;margin:0 auto;}
+.topper-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:18px 16px;display:flex;align-items:center;gap:14px;transition:all .3s;}
+.topper-card:hover{transform:translateY(-2px);}
+.topper-card.neet-topper{border-left:3px solid var(--electric);}
+.topper-card.jee-topper{border-left:3px solid var(--gold);}
+.t-img{width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0;border:2px solid var(--gold);}
+.t-img.neet-img{background:linear-gradient(135deg,#0D2A6B,#1A56DB);border-color:var(--electric);}
+.t-img.jee-img{background:linear-gradient(135deg,#4A2000,#FF6B00);border-color:var(--gold);}
+.t-name{font-family:'Sora',sans-serif;font-size:14px;font-weight:700;}
+.t-score{font-size:13px;font-weight:600;margin-top:3px;}
+.t-score.neet-score{color:var(--electric);}
+.t-score.jee-score{color:var(--gold);}
+.t-air{display:inline-block;font-size:11px;font-weight:800;padding:3px 10px;border-radius:12px;margin-top:5px;}
+.t-air.neet-air{background:rgba(0,212,255,.12);border:1px solid rgba(0,212,255,.3);color:var(--electric);}
+.t-air.jee-air{background:rgba(255,215,0,.12);border:1px solid rgba(255,215,0,.3);color:var(--gold);}
+.exam-label{display:inline-block;font-size:10px;font-weight:800;padding:2px 8px;border-radius:8px;margin-bottom:4px;letter-spacing:.5px;}
+.exam-label.neet-lbl{background:rgba(0,212,255,.15);color:var(--electric);}
+.exam-label.jee-lbl{background:rgba(255,215,0,.15);color:var(--gold);}
+
+/* COURSES */
+.courses-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:20px;max-width:1200px;margin:0 auto;}
+.course-card{background:var(--card);border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:all .3s;}
+.course-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(26,86,219,.2);}
+.course-card.neet-course{border-color:rgba(0,212,255,.25);}
+.course-card.neet-course:hover{border-color:var(--electric);}
+.course-card.jee-course{border-color:rgba(255,215,0,.2);}
+.course-card.jee-course:hover{border-color:var(--gold);}
+.course-card.featured-course{border-color:var(--electric);}
+.pop-badge{font-size:11px;font-weight:800;text-align:center;padding:7px;letter-spacing:1px;text-transform:uppercase;}
+.pop-badge.neet-pop{background:var(--electric);color:var(--navy);}
+.pop-badge.jee-pop{background:var(--gold);color:var(--navy);}
+.course-head{padding:22px 22px 16px;border-bottom:1px solid var(--border);}
+.c-icon{font-size:28px;margin-bottom:10px;}
+.c-exam-badge{display:inline-block;font-size:10px;font-weight:800;padding:2px 10px;border-radius:8px;margin-bottom:8px;letter-spacing:.5px;}
+.c-exam-badge.nb{background:rgba(0,212,255,.15);color:var(--electric);border:1px solid rgba(0,212,255,.3);}
+.c-exam-badge.jb{background:rgba(255,215,0,.12);color:var(--gold);border:1px solid rgba(255,215,0,.3);}
+.c-exam-badge.both{background:linear-gradient(90deg,rgba(0,212,255,.15),rgba(255,215,0,.12));color:var(--white);border:1px solid rgba(255,255,255,.2);}
+.c-name{font-family:'Sora',sans-serif;font-size:18px;font-weight:800;color:var(--white);margin-bottom:5px;}
+.c-tag{font-size:13px;color:var(--muted);}
+.course-body{padding:18px 22px;}
+.c-features{list-style:none;display:flex;flex-direction:column;gap:8px;margin-bottom:18px;}
+.c-features li{display:flex;align-items:center;gap:10px;font-size:13px;color:rgba(255,255,255,.75);}
+.c-features li::before{content:'✓';color:var(--green);font-weight:800;flex-shrink:0;}
+.c-price{font-size:13px;color:var(--muted);margin-bottom:14px;}
+.c-price strong{font-size:20px;color:var(--white);}
+.c-btn{width:100%;padding:13px;color:white;border:none;border-radius:8px;font-family:'Sora',sans-serif;font-size:14px;font-weight:700;cursor:pointer;transition:all .2s;display:flex;align-items:center;justify-content:center;gap:8px;}
+.c-btn.neet-btn{background:var(--blue);}
+.c-btn.neet-btn:hover{background:var(--blue-light);}
+.c-btn.jee-btn{background:linear-gradient(90deg,#B45309,#D97706);}
+.c-btn.jee-btn:hover{background:linear-gradient(90deg,#D97706,#F59E0B);}
+.c-btn.both-btn{background:var(--blue);}
+.c-btn.both-btn:hover{background:var(--blue-light);}
+.featured-course .c-btn.neet-btn{background:var(--electric);color:var(--navy);}
+
+/* FACULTY */
+.faculty-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(268px,1fr));gap:22px;max-width:1100px;margin:0 auto;}
+.fac-card{background:var(--card);border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:all .3s;}
+.fac-card:hover{box-shadow:0 10px 40px rgba(0,212,255,.1);}
+.fac-card.neet-fac:hover{border-color:var(--electric);}
+.fac-card.jee-fac:hover{border-color:var(--gold);}
+.fac-top{padding:22px 22px 18px;display:flex;align-items:flex-start;gap:16px;border-bottom:1px solid var(--border);}
+.fac-top.neet-top{background:linear-gradient(135deg,var(--navy),#0A2040);}
+.fac-top.jee-top{background:linear-gradient(135deg,var(--navy),#1A0D00);}
+.fac-img{width:66px;height:66px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;flex-shrink:0;}
+.fac-img.neet-img{background:linear-gradient(135deg,var(--blue),var(--electric));border:2px solid var(--electric);}
+.fac-img.jee-img{background:linear-gradient(135deg,#92400E,#D97706);border:2px solid var(--gold);}
+.fac-name{font-family:'Sora',sans-serif;font-size:16px;font-weight:800;color:var(--white);}
+.fac-sub{font-size:13px;font-weight:600;margin-top:3px;}
+.fac-sub.ns{color:var(--electric);}
+.fac-sub.js{color:var(--gold);}
+.fac-qual{font-size:12px;color:var(--muted);margin-top:3px;font-weight:600;}
+.fac-exp{display:inline-block;font-size:11px;font-weight:800;padding:3px 10px;border-radius:12px;margin-top:8px;}
+.fac-exp.ne{background:rgba(0,212,255,.12);border:1px solid rgba(0,212,255,.3);color:var(--electric);}
+.fac-exp.je{background:rgba(255,215,0,.12);border:1px solid rgba(255,215,0,.3);color:var(--gold);}
+.fac-body{padding:16px 22px;}
+.fac-stats{display:flex;gap:18px;margin-bottom:14px;}
+.fac-stat .val{font-family:'Sora',sans-serif;font-size:19px;font-weight:800;color:var(--electric);}
+.fac-card.jee-fac .fac-stat .val{color:var(--gold);}
+.fac-stat .lbl{font-size:11px;color:var(--muted);margin-top:2px;}
+.fac-tags{display:flex;flex-wrap:wrap;gap:6px;}
+.fac-tag{font-size:11px;font-weight:700;padding:3px 10px;border-radius:12px;}
+.fac-tag.nt{background:rgba(26,86,219,.15);border:1px solid rgba(26,86,219,.3);color:var(--blue-light);}
+.fac-tag.jt{background:rgba(255,215,0,.1);border:1px solid rgba(255,215,0,.25);color:var(--gold);}
+
+/* WHY US */
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(195px,1fr));gap:18px;max-width:1100px;margin:0 auto;}
+.why-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:24px 20px;text-align:center;transition:all .3s;position:relative;overflow:hidden;}
+.why-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--blue),var(--electric));transform:scaleX(0);transition:transform .3s;transform-origin:left;}
+.why-card:hover{transform:translateY(-4px);border-color:var(--blue);}
+.why-card:hover::after{transform:scaleX(1);}
+.why-icon{font-size:32px;margin-bottom:12px;}
+.why-title{font-family:'Sora',sans-serif;font-size:14px;font-weight:700;margin-bottom:7px;}
+.why-desc{font-size:13px;color:var(--muted);line-height:1.6;}
+
+/* TESTIMONIALS */
+.testi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(258px,1fr));gap:18px;max-width:1100px;margin:0 auto;}
+.testi-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:22px;position:relative;overflow:hidden;transition:all .3s;}
+.testi-card:hover{transform:translateY(-3px);}
+.testi-card.neet-t:hover{border-color:var(--electric);}
+.testi-card.jee-t:hover{border-color:var(--gold);}
+.testi-card::before{content:'"';position:absolute;top:6px;right:14px;font-family:'Sora',sans-serif;font-size:68px;opacity:.1;line-height:1;pointer-events:none;}
+.testi-card.neet-t::before{color:var(--electric);}
+.testi-card.jee-t::before{color:var(--gold);}
+.score-tag{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:800;padding:4px 12px;border-radius:20px;margin-bottom:12px;}
+.score-tag.neet-st{background:rgba(16,185,129,.15);border:1px solid rgba(16,185,129,.3);color:var(--green);}
+.score-tag.jee-st{background:rgba(255,215,0,.12);border:1px solid rgba(255,215,0,.3);color:var(--gold);}
+.stars{color:var(--gold);font-size:15px;margin-bottom:10px;}
+.t-text{font-size:14px;color:rgba(255,255,255,.72);line-height:1.7;margin-bottom:16px;font-style:italic;}
+.t-author{display:flex;align-items:center;gap:12px;}
+.t-avi{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:800;color:white;flex-shrink:0;}
+.t-avi.na{background:linear-gradient(135deg,var(--blue),var(--electric));border:2px solid var(--electric);}
+.t-avi.ja{background:linear-gradient(135deg,#92400E,#D97706);border:2px solid var(--gold);}
+.t-name{font-family:'Sora',sans-serif;font-size:14px;font-weight:700;}
+.t-meta{font-size:12px;color:var(--muted);margin-top:2px;}
+.t-verified{font-size:11px;color:var(--green);font-weight:600;margin-top:2px;}
+
+/* LEAD FORM */
+.form-inner{max-width:660px;margin:0 auto;position:relative;z-index:1;}
+.form-section .section-title{color:var(--white);}
+.form-section .section-sub{color:var(--muted);}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin-top:34px;}
+.form-group{display:flex;flex-direction:column;}
+.form-group.full{grid-column:1/-1;}
+.form-group label{font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin-bottom:7px;}
+.form-group input,.form-group select,.form-group textarea{background:rgba(255,255,255,.06);border:1px solid var(--border);border-radius:9px;padding:14px;font-family:'Noto Sans',sans-serif;font-size:15px;color:var(--white);outline:none;transition:border-color .2s;-webkit-appearance:none;}
+.form-group input::placeholder,.form-group textarea::placeholder{color:rgba(255,255,255,.25);}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--electric);}
+.form-group select{color:rgba(255,255,255,.8);}
+.form-group select option{background:#0A0F2C;color:white;}
+.form-group textarea{resize:vertical;min-height:80px;}
+.form-submit{width:100%;margin-top:16px;padding:18px;background:var(--blue);color:white;border:none;border-radius:9px;font-family:'Sora',sans-serif;font-size:17px;font-weight:800;cursor:pointer;transition:all .2s;display:flex;align-items:center;justify-content:center;gap:10px;box-shadow:0 4px 24px rgba(26,86,219,.45);min-height:58px;}
+.form-submit:hover{background:var(--blue-light);transform:translateY(-2px);}
+.form-submit:disabled{opacity:.55;cursor:not-allowed;transform:none;}
+.form-note{text-align:center;font-size:12px;color:var(--muted);margin-top:10px;}
+.success-msg{display:none;margin-top:16px;background:rgba(16,185,129,.15);border:1px solid var(--green);color:#34d399;padding:18px 20px;border-radius:10px;text-align:center;font-weight:700;font-size:15px;}
+
+/* SEO / CONTACT */
+.seo-section{padding:64px 32px;}
+.seo-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;}
+.seo-text .section-tag{display:block;margin-bottom:10px;}
+.seo-text h2{font-family:'Sora',sans-serif;font-size:26px;font-weight:800;color:var(--white);margin-bottom:14px;line-height:1.3;}
+.seo-text p{font-size:15px;color:var(--muted);line-height:1.8;margin-bottom:20px;}
+.addr-block{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px;}
+.addr-row{display:flex;align-items:flex-start;gap:12px;font-size:14px;color:rgba(255,255,255,.75);padding:9px 0;border-bottom:1px solid var(--border);}
+.addr-row:last-child{border-bottom:none;}
+.addr-row .ai{font-size:16px;flex-shrink:0;margin-top:1px;}
+.addr-row strong{font-weight:700;color:var(--white);display:block;margin-bottom:2px;}
+.map-wrap{border-radius:14px;overflow:hidden;border:2px solid var(--border);}
+.map-wrap iframe{width:100%;height:320px;border:none;display:block;}
+
+/* FOOTER */
+footer{background:#060A1C;padding:52px 32px 28px;border-top:1px solid var(--border);}
+.f-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1.5fr;gap:30px;max-width:1100px;margin:0 auto;padding-bottom:36px;border-bottom:1px solid var(--border);}
+.f-logo{font-family:'Sora',sans-serif;font-size:16px;font-weight:800;color:var(--white);margin-bottom:10px;}
+.f-logo .fn{color:var(--electric);}.f-logo .fj{color:var(--gold);}
+.f-tagline{font-size:13px;color:var(--muted);line-height:1.7;margin-bottom:16px;}
+.social-row{display:flex;gap:10px;}
+.s-btn{width:34px;height:34px;border-radius:8px;background:rgba(255,255,255,.06);display:flex;align-items:center;justify-content:center;font-size:16px;transition:background .2s;border:1px solid var(--border);}
+.s-btn:hover{background:var(--blue);}
+.f-col h4{font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--electric);margin-bottom:14px;}
+.f-col ul{list-style:none;display:flex;flex-direction:column;gap:8px;}
+.f-col ul li a{font-size:13px;color:var(--muted);transition:color .2s;}
+.f-col ul li a:hover{color:var(--white);}
+.f-hours{display:flex;flex-direction:column;gap:8px;}
+.hr-row{display:flex;justify-content:space-between;font-size:13px;}
+.hr-row .dy{color:var(--muted);}
+.hr-row .tm{color:var(--white);font-weight:600;}
+.open-now{margin-top:14px;padding:10px 14px;background:rgba(16,185,129,.12);border:1px solid rgba(16,185,129,.3);border-radius:8px;font-size:13px;color:#34d399;font-weight:700;}
+.f-bottom{max-width:1100px;margin:22px auto 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;font-size:12px;color:var(--muted);}
+.f-bottom a{color:var(--muted);transition:color .2s;}
+.f-bottom a:hover{color:var(--white);}
+
+/* RESPONSIVE */
+@media(max-width:1024px){.courses-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:960px){.seo-inner{grid-template-columns:1fr;}.f-grid{grid-template-columns:1fr 1fr;}.exam-info-grid{grid-template-columns:1fr;}}
+@media(max-width:768px){
+  nav{padding:0 16px;height:60px;}.nav-links{display:none;}.hamburger{display:flex;}.nav-logo small{display:none;}.nav-cta{display:none;}
+  .hero{padding:72px 20px 52px;}.strip{font-size:12px;padding:10px 16px;}
+  .results-section,.faculty-section,.testi-section,.courses-section,.whyus-section,.seo-section,.form-section,.exam-tabs-section{padding:52px 20px;}
+  .form-grid{grid-template-columns:1fr;}.form-group.full{grid-column:1;}
+  .f-grid{grid-template-columns:1fr;}.f-bottom{flex-direction:column;text-align:center;}
+  .wa-float{bottom:18px;right:14px;width:50px;height:50px;}
+  .courses-grid{grid-template-columns:1fr;}
+}
+@media(max-width:480px){
+  .hero-btns{flex-direction:column;}.btn-primary,.btn-wa{width:100%;justify-content:center;}
+  .results-nums{grid-template-columns:1fr 1fr;}.toppers-grid,.faculty-grid{grid-template-columns:1fr;}
+  .exam-tabs{flex-direction:column;}
+}
+</style>
+</head>
+<body>
+
+<!-- WHATSAPP FLOAT -->
+<a class="wa-float" href="https://wa.me/919785124522?text=Hi!+I+want+to+book+a+Free+Demo+Class+at+Jaipur+Elite+NEET+%26+JEE+Academy." target="_blank" aria-label="WhatsApp Us">
+  <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16 0C7.164 0 0 7.164 0 16c0 2.82.733 5.46 2.01 7.762L0 32l8.48-2.22A15.93 15.93 0 0016 32c8.836 0 16-7.164 16-16S24.836 0 16 0zm8.28 22.17c-.36.99-1.77 1.8-2.88 2.03-.77.16-1.77.29-5.15-1.1-4.32-1.75-7.1-6.11-7.31-6.39-.21-.28-1.73-2.3-1.73-4.39 0-2.09 1.09-3.12 1.48-3.54.36-.39.79-.49 1.05-.49.26 0 .52 0 .75.01.24.01.57-.09.89.68.33.79 1.12 2.74 1.22 2.94.1.2.17.44.03.71-.13.26-.2.43-.39.66-.2.23-.42.52-.6.69-.2.19-.41.39-.17.77.24.38 1.07 1.76 2.3 2.85 1.58 1.41 2.9 1.85 3.31 2.06.41.21.65.18.89-.11.24-.29 1.03-1.2 1.3-1.61.28-.41.55-.34.93-.2.38.13 2.41 1.13 2.82 1.34.41.21.68.31.78.48.1.18.1 1.03-.25 2.01z"/></svg>
+</a>
+
+<!-- STICKY NAV -->
+<nav>
+  <a href="#home" class="nav-logo">
+    Jaipur Elite <span class="neet">NEET</span> &amp; <span class="jee">JEE</span> Academy
+    <small>Best Coaching Institute in Jaipur</small>
+  </a>
+  <div class="nav-links">
+    <a href="#results">Results</a>
+    <a href="#courses">Courses</a>
+    <a href="#faculty">Faculty</a>
+    <a href="#testimonials">Reviews</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <div class="nav-right">
+    <button class="nav-cta" onclick="go('lead-form')">🎓 Book Free Demo</button>
+    <button class="hamburger" id="ham" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mob-menu" id="mob-menu">
+  <a href="#results" onclick="toggleMenu()">Results</a>
+  <a href="#courses" onclick="toggleMenu()">Courses</a>
+  <a href="#faculty" onclick="toggleMenu()">Faculty</a>
+  <a href="#testimonials" onclick="toggleMenu()">Reviews</a>
+  <a href="#contact" onclick="toggleMenu()">Contact</a>
+  <button class="mob-cta" onclick="go('lead-form');toggleMenu();">🎓 Book Free Demo Class</button>
+</div>
+
+<!-- ANNOUNCEMENT STRIP -->
+<div class="strip">
+  🔥 New NEET &amp; JEE Batches Starting 15th April 2025 — <span>Limited Seats.</span> Book Your Free Demo Now →
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-badge">🏆 Jaipur's #1 NEET &amp; JEE Coaching Institute</div>
+    <h1>Crack <span class="hi-neet">NEET</span> &amp; <span class="hi-jee">JEE</span> with Expert Guidance — Enroll for Demo Class Today</h1>
+    <p class="hero-sub">Join Jaipur's most trusted NEET &amp; JEE academy. Proven selections, experienced faculty, and a system built to get you into your dream college.</p>
+    <div class="proof-pills">
+      <div class="pill pill-green">✅ 500+ NEET Selections (2024)</div>
+      <div class="pill pill-gold">🏆 150+ JEE Qualifiers (2024)</div>
+      <div class="pill pill-blue">⭐ 10+ Years Experience</div>
+    </div>
+    <div class="hero-btns">
+      <button class="btn-primary" onclick="go('lead-form')">🎓 Book Free Demo Class</button>
+      <a href="https://wa.me/919785124522?text=Hi!+I+want+to+know+more+about+NEET+%26+JEE+coaching." target="_blank">
+        <button class="btn-wa">💬 WhatsApp Now</button>
+      </a>
+    </div>
+    <div class="hero-trust">
+      <div class="ht-item"><span class="ht-dot blue"></span>500+ NEET Selections</div>
+      <div class="ht-item"><span class="ht-dot gold"></span>150+ JEE Qualifiers</div>
+      <div class="ht-item"><span class="ht-dot blue"></span>AIR Under 1000 — 12 Students</div>
+      <div class="ht-item"><span class="ht-dot gold"></span>JEE AIR Under 5000 — 8 Students</div>
+      <div class="ht-item"><span class="ht-dot blue"></span>Free Demo Available</div>
+    </div>
+  </div>
+</section>
+
+<!-- RESULTS -->
+<section class="results-section" id="results">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Our Track Record</div>
+      <h2 class="section-title">Results That Speak for Themselves</h2>
+      <p class="section-sub">Across NEET and JEE — our students consistently rank among the best in Rajasthan.</p>
+    </div>
+    <div class="results-nums">
+      <div class="rnum-card"><div class="rn-num">500+</div><div class="rn-lbl">NEET Selections 2024</div></div>
+      <div class="rnum-card gold-card"><div class="rn-num">150+</div><div class="rn-lbl">JEE Qualifiers 2024</div></div>
+      <div class="rnum-card"><div class="rn-num">12</div><div class="rn-lbl">NEET AIR Under 1,000</div></div>
+      <div class="rnum-card gold-card"><div class="rn-num">8</div><div class="rn-lbl">JEE AIR Under 5,000</div></div>
+      <div class="rnum-card"><div class="rn-num">98%</div><div class="rn-lbl">NEET Pass Rate 2024</div></div>
+      <div class="rnum-card gold-card"><div class="rn-num">10+</div><div class="rn-lbl">Years of Excellence</div></div>
+    </div>
+
+    <div class="section-header" style="margin-top:52px;margin-bottom:28px;">
+      <div class="section-tag">Top Rankers 2024</div>
+      <h2 class="section-title" style="font-size:clamp(20px,2.5vw,28px);">Our Star Students</h2>
+    </div>
+    <div class="toppers-grid">
+      <div class="topper-card neet-topper">
+        <div class="t-img neet-img">👩</div>
+        <div>
+          <div class="exam-label neet-lbl">NEET</div>
+          <div class="t-name">Ananya Sharma</div>
+          <div class="t-score neet-score">698 / 720</div>
+          <div class="t-air neet-air">AIR — 312</div>
+        </div>
+      </div>
+      <div class="topper-card jee-topper">
+        <div class="t-img jee-img">👦</div>
+        <div>
+          <div class="exam-label jee-lbl">JEE Mains</div>
+          <div class="t-name">Arjun Singhania</div>
+          <div class="t-score jee-score">98.4 Percentile</div>
+          <div class="t-air jee-air">AIR — 3,241</div>
+        </div>
+      </div>
+      <div class="topper-card neet-topper">
+        <div class="t-img neet-img">👦</div>
+        <div>
+          <div class="exam-label neet-lbl">NEET</div>
+          <div class="t-name">Rohan Meena</div>
+          <div class="t-score neet-score">685 / 720</div>
+          <div class="t-air neet-air">AIR — 548</div>
+        </div>
+      </div>
+      <div class="topper-card jee-topper">
+        <div class="t-img jee-img">👩</div>
+        <div>
+          <div class="exam-label jee-lbl">JEE Advanced</div>
+          <div class="t-name">Sneha Kulshrestha</div>
+          <div class="t-score jee-score">IIT Bombay — CS</div>
+          <div class="t-air jee-air">AIR — 4,812</div>
+        </div>
+      </div>
+      <div class="topper-card neet-topper">
+        <div class="t-img neet-img">👩</div>
+        <div>
+          <div class="exam-label neet-lbl">NEET</div>
+          <div class="t-name">Prachi Gupta</div>
+          <div class="t-score neet-score">672 / 720</div>
+          <div class="t-air neet-air">AIR — 724</div>
+        </div>
+      </div>
+      <div class="topper-card jee-topper">
+        <div class="t-img jee-img">👦</div>
+        <div>
+          <div class="exam-label jee-lbl">JEE Mains</div>
+          <div class="t-name">Karan Agarwal</div>
+          <div class="t-score jee-score">97.1 Percentile</div>
+          <div class="t-air jee-air">AIR — 4,620</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COURSES -->
+<section class="courses-section" id="courses">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Programs</div>
+      <h2 class="section-title">NEET &amp; JEE Courses</h2>
+      <p class="section-sub">Choose the program that fits your goal — every course is built around exam patterns with expert faculty.</p>
+    </div>
+    <div class="courses-grid">
+
+      <!-- NEET Crash -->
+      <div class="course-card neet-course">
+        <div class="course-head">
+          <div class="c-icon">⚡</div>
+          <div class="c-exam-badge nb">NEET</div>
+          <div class="c-name">NEET Crash Course</div>
+          <div class="c-tag">60-Day Intensive — Droppers &amp; Repeaters</div>
+        </div>
+        <div class="course-body">
+          <ul class="c-features">
+            <li>Full NEET Syllabus in 60 Days</li>
+            <li>Daily 8-Hour Sessions</li>
+            <li>1000+ Practice Questions</li>
+            <li>15 Full NEET Mock Tests</li>
+            <li>Daily Evening Doubt Sessions</li>
+            <li>Study Material Included</li>
+          </ul>
+          <div class="c-price">Starting at <strong>₹18,000</strong></div>
+          <button class="c-btn neet-btn" onclick="go('lead-form')">📋 Enroll Now</button>
+        </div>
+      </div>
+
+      <!-- NEET 1 Year — FEATURED -->
+      <div class="course-card neet-course featured-course">
+        <div class="pop-badge neet-pop">⭐ Most Popular — NEET</div>
+        <div class="course-head">
+          <div class="c-icon">🏆</div>
+          <div class="c-exam-badge nb">NEET</div>
+          <div class="c-name">NEET 1-Year Program</div>
+          <div class="c-tag">Full-Year — Class 12 &amp; Droppers</div>
+        </div>
+        <div class="course-body">
+          <ul class="c-features">
+            <li>Complete NEET Syllabus (Physics, Chemistry, Biology)</li>
+            <li>Weekly Tests + Monthly Full Mocks</li>
+            <li>IIT/AIIMS Trained Expert Faculty</li>
+            <li>Personal Mentor Assigned</li>
+            <li>Online + Offline Access</li>
+            <li>Study Material + PYQs Included</li>
+            <li>Parent Progress Meetings</li>
+          </ul>
+          <div class="c-price">Starting at <strong>₹55,000</strong> / Year</div>
+          <button class="c-btn neet-btn" onclick="go('lead-form')">📋 Enroll Now</button>
+        </div>
+      </div>
+
+      <!-- JEE Crash -->
+      <div class="course-card jee-course">
+        <div class="course-head">
+          <div class="c-icon">⚡</div>
+          <div class="c-exam-badge jb">JEE</div>
+          <div class="c-name">JEE Crash Course</div>
+          <div class="c-tag">75-Day Intensive — JEE Mains &amp; Advanced</div>
+        </div>
+        <div class="course-body">
+          <ul class="c-features">
+            <li>Complete JEE Mains Revision</li>
+            <li>Advanced Problem Solving Sessions</li>
+            <li>1500+ JEE-Level Questions</li>
+            <li>20 Full JEE Mock Tests</li>
+            <li>Daily Doubt Clearing</li>
+            <li>Formula &amp; Shortcut Sheets</li>
+          </ul>
+          <div class="c-price">Starting at <strong>₹22,000</strong></div>
+          <button class="c-btn jee-btn" onclick="go('lead-form')">📋 Enroll Now</button>
+        </div>
+      </div>
+
+      <!-- JEE 1 Year — FEATURED -->
+      <div class="course-card jee-course">
+        <div class="pop-badge jee-pop">⭐ Top Rated — JEE</div>
+        <div class="course-head">
+          <div class="c-icon">🥇</div>
+          <div class="c-exam-badge jb">JEE</div>
+          <div class="c-name">JEE 1-Year Program</div>
+          <div class="c-tag">Full-Year — JEE Mains + Advanced</div>
+        </div>
+        <div class="course-body">
+          <ul class="c-features">
+            <li>Full JEE Mains + Advanced Syllabus</li>
+            <li>IIT-Level Problem Practice</li>
+            <li>NIT/IIT Trained Faculty</li>
+            <li>Bi-Weekly Tests + Full Mocks</li>
+            <li>Online + Offline Access</li>
+            <li>Study Material + Past Papers</li>
+            <li>1-on-1 Mentoring Sessions</li>
+          </ul>
+          <div class="c-price">Starting at <strong>₹60,000</strong> / Year</div>
+          <button class="c-btn jee-btn" onclick="go('lead-form')">📋 Enroll Now</button>
+        </div>
+      </div>
+
+      <!-- Foundation -->
+      <div class="course-card" style="border-color:rgba(255,255,255,.12);">
+        <div class="course-head">
+          <div class="c-icon">📚</div>
+          <div class="c-exam-badge both">NEET + JEE</div>
+          <div class="c-name">Foundation Program</div>
+          <div class="c-tag">2-Year — Class 11 &amp; 12 Combined</div>
+        </div>
+        <div class="course-body">
+          <ul class="c-features">
+            <li>Class 11 + 12 Board + NEET/JEE Together</li>
+            <li>Build Concepts from Ground Up</li>
+            <li>Choose NEET or JEE Track in Year 2</li>
+            <li>Bi-Weekly Tests + Progress Tracking</li>
+            <li>Board Exam Preparation Included</li>
+            <li>Complete Study Kit</li>
+          </ul>
+          <div class="c-price">Starting at <strong>₹85,000</strong> / 2 Years</div>
+          <button class="c-btn both-btn" onclick="go('lead-form')">📋 Enroll Now</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FACULTY -->
+<section class="faculty-section" id="faculty">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Our Educators</div>
+      <h2 class="section-title">Learn from the Best</h2>
+      <p class="section-sub">Qualified, experienced, and dedicated to one goal — getting you into your dream college.</p>
+    </div>
+    <div class="faculty-grid">
+
+      <div class="fac-card neet-fac">
+        <div class="fac-top neet-top">
+          <div class="fac-img neet-img">👨‍🔬</div>
+          <div>
+            <div class="fac-name">Dr. Anil Mathur</div>
+            <div class="fac-sub ns">Biology — NEET Specialist</div>
+            <div class="fac-qual">M.Sc, Ph.D — Rajasthan University</div>
+            <div class="fac-exp ne">14 Years Teaching</div>
+          </div>
+        </div>
+        <div class="fac-body">
+          <div class="fac-stats">
+            <div class="fac-stat"><div class="val">320+</div><div class="lbl">NEET Selected</div></div>
+            <div class="fac-stat"><div class="val">4.9★</div><div class="lbl">Rating</div></div>
+          </div>
+          <div class="fac-tags">
+            <span class="fac-tag nt">NEET Biology Expert</span>
+            <span class="fac-tag nt">Rajasthan Topper Mentor</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="fac-card neet-fac">
+        <div class="fac-top neet-top">
+          <div class="fac-img neet-img">👩‍🏫</div>
+          <div>
+            <div class="fac-name">Ms. Rekha Verma</div>
+            <div class="fac-sub ns">Chemistry — NEET &amp; JEE</div>
+            <div class="fac-qual">M.Sc Chemistry — IIT Bombay</div>
+            <div class="fac-exp ne">11 Years Teaching</div>
+          </div>
+        </div>
+        <div class="fac-body">
+          <div class="fac-stats">
+            <div class="fac-stat"><div class="val">280+</div><div class="lbl">Selected</div></div>
+            <div class="fac-stat"><div class="val">4.8★</div><div class="lbl">Rating</div></div>
+          </div>
+          <div class="fac-tags">
+            <span class="fac-tag nt">IIT Bombay Alumna</span>
+            <span class="fac-tag nt">Organic Chemistry Expert</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="fac-card jee-fac">
+        <div class="fac-top jee-top">
+          <div class="fac-img jee-img">👨‍💻</div>
+          <div>
+            <div class="fac-name">Mr. Deepak Saini</div>
+            <div class="fac-sub js">Physics — JEE &amp; NEET</div>
+            <div class="fac-qual">B.Tech Physics — NIT Jaipur</div>
+            <div class="fac-exp je">9 Years Teaching</div>
+          </div>
+        </div>
+        <div class="fac-body">
+          <div class="fac-stats">
+            <div class="fac-stat"><div class="val">210+</div><div class="lbl">Selected</div></div>
+            <div class="fac-stat"><div class="val">4.9★</div><div class="lbl">Rating</div></div>
+          </div>
+          <div class="fac-tags">
+            <span class="fac-tag jt">NIT Jaipur Alumnus</span>
+            <span class="fac-tag jt">JEE Physics Specialist</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="fac-card jee-fac">
+        <div class="fac-top jee-top">
+          <div class="fac-img jee-img">👨‍🏫</div>
+          <div>
+            <div class="fac-name">Mr. Vikas Sharma</div>
+            <div class="fac-sub js">Mathematics — JEE Specialist</div>
+            <div class="fac-qual">M.Sc Mathematics — IIT Delhi</div>
+            <div class="fac-exp je">12 Years Teaching</div>
+          </div>
+        </div>
+        <div class="fac-body">
+          <div class="fac-stats">
+            <div class="fac-stat"><div class="val">190+</div><div class="lbl">JEE Qualified</div></div>
+            <div class="fac-stat"><div class="val">4.8★</div><div class="lbl">Rating</div></div>
+          </div>
+          <div class="fac-tags">
+            <span class="fac-tag jt">IIT Delhi Alumnus</span>
+            <span class="fac-tag jt">Calculus &amp; Algebra Expert</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="whyus-section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Why Choose Us</div>
+      <h2 class="section-title">Why 650+ Students Chose Us</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card"><div class="why-icon">🎯</div><div class="why-title">Exam-Focused Curriculum</div><div class="why-desc">Every class, test, and material is built around NEET and JEE exam patterns — nothing irrelevant taught.</div></div>
+      <div class="why-card"><div class="why-icon">📊</div><div class="why-title">Weekly Test Series</div><div class="why-desc">Regular mock tests track progress and expose weak areas before the real exam arrives.</div></div>
+      <div class="why-card"><div class="why-icon">🙋</div><div class="why-title">Daily Doubt Sessions</div><div class="why-desc">No question goes unanswered. Dedicated doubt sessions every evening, 6 days a week.</div></div>
+      <div class="why-card"><div class="why-icon">👨‍👩‍👧</div><div class="why-title">Small Batches (Max 30)</div><div class="why-desc">Every student gets individual attention — teachers know your name and your weak spots.</div></div>
+      <div class="why-card"><div class="why-icon">📱</div><div class="why-title">Online + Offline Access</div><div class="why-desc">Recorded lectures, notes, and test series accessible anytime, anywhere on any device.</div></div>
+      <div class="why-card"><div class="why-icon">🔬</div><div class="why-title">Separate NEET &amp; JEE Tracks</div><div class="why-desc">Dedicated syllabus tracks for NEET and JEE — no mixed-up teaching, clear focus for each student.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testi-section" id="testimonials">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Student Reviews</div>
+      <h2 class="section-title">Hear It from Our Students</h2>
+      <p class="section-sub">NEET and JEE qualifiers share their experience in their own words.</p>
+    </div>
+    <div class="testi-grid">
+
+      <div class="testi-card neet-t">
+        <div class="score-tag neet-st">🏆 NEET 698/720 — AIR 312</div>
+        <div class="stars">★★★★★</div>
+        <div class="t-text">"I joined after failing my first attempt. Dr. Mathur's Biology sessions and the daily doubt clearing changed everything. I cleared NEET with AIR 312 in my second attempt."</div>
+        <div class="t-author">
+          <div class="t-avi na">A</div>
+          <div><div class="t-name">Ananya Sharma</div><div class="t-meta">NEET Dropper Batch 2024 · Mansarovar, Jaipur</div><div class="t-verified">✅ Verified Student</div></div>
+        </div>
+      </div>
+
+      <div class="testi-card jee-t">
+        <div class="score-tag jee-st">🏆 JEE Mains — 98.4 Percentile</div>
+        <div class="stars">★★★★★</div>
+        <div class="t-text">"Mr. Saini's Physics shortcuts and Mr. Sharma's Maths problem sets are the best I've seen in any coaching. The JEE track here is laser-focused. Scored 98.4 percentile in JEE Mains."</div>
+        <div class="t-author">
+          <div class="t-avi ja">Ar</div>
+          <div><div class="t-name">Arjun Singhania</div><div class="t-meta">JEE 1-Year Batch 2024 · C-Scheme, Jaipur</div><div class="t-verified">✅ Verified Student</div></div>
+        </div>
+      </div>
+
+      <div class="testi-card neet-t">
+        <div class="score-tag neet-st">🏆 NEET 685/720 — AIR 548</div>
+        <div class="stars">★★★★★</div>
+        <div class="t-text">"The Sunday NEET mocks felt exactly like the real exam. Ms. Verma's chemistry notes are gold. Studied here for one year and exceeded all my expectations."</div>
+        <div class="t-author">
+          <div class="t-avi na">R</div>
+          <div><div class="t-name">Rohan Meena</div><div class="t-meta">NEET 1-Year Batch 2024 · Vaishali Nagar, Jaipur</div><div class="t-verified">✅ Verified Student</div></div>
+        </div>
+      </div>
+
+      <div class="testi-card jee-t">
+        <div class="score-tag jee-st">🏆 JEE Advanced — IIT Bombay CS</div>
+        <div class="stars">★★★★★</div>
+        <div class="t-text">"The JEE Advanced preparation here is serious. Small batches mean you can't hide your doubts! Mr. Sharma's calculus classes were the turning point for me. Now at IIT Bombay."</div>
+        <div class="t-author">
+          <div class="t-avi ja">S</div>
+          <div><div class="t-name">Sneha Kulshrestha</div><div class="t-meta">JEE Foundation Batch 2023 · Malviya Nagar, Jaipur</div><div class="t-verified">✅ Verified Student</div></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- LEAD FORM -->
+<section class="form-section" id="lead-form">
+  <div class="form-inner">
+    <div class="section-header">
+      <div class="section-tag">Book Now — It's Free</div>
+      <h2 class="section-title">Book Your Free Demo Class</h2>
+      <p class="section-sub">Fill in your details. Our team will contact you within 1 hour.</p>
+    </div>
+    <div class="form-grid">
+      <div class="form-group">
+        <label>Student Name</label>
+        <input type="text" id="f-name" placeholder="Your full name" autocomplete="name"/>
+      </div>
+      <div class="form-group">
+        <label>Class / Year</label>
+        <select id="f-class">
+          <option value="">Select Class</option>
+          <option>Class 11 (Appearing)</option>
+          <option>Class 12 (Appearing)</option>
+          <option>Class 12 Passed — Dropper</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Phone Number</label>
+        <input type="tel" id="f-phone" placeholder="+91 97851 24522" autocomplete="tel"/>
+      </div>
+      <div class="form-group">
+        <label>Target Exam</label>
+        <select id="f-exam">
+          <option value="">Select Target</option>
+          <option>NEET 2025</option>
+          <option>NEET 2026</option>
+          <option>JEE Mains 2025</option>
+          <option>JEE Mains 2026</option>
+          <option>JEE Advanced 2025</option>
+          <option>JEE Advanced 2026</option>
+          <option>Both NEET + JEE</option>
+        </select>
+      </div>
+      <div class="form-group full">
+        <label>Message (Optional)</label>
+        <textarea id="f-msg" placeholder="Any questions? Tell us about your previous score or goals..."></textarea>
+      </div>
+    </div>
+    <button class="form-submit" id="f-submit" onclick="submitForm()">🎓 Book My Free Demo Class</button>
+    <p class="form-note">🔒 No spam. Your details are 100% private. We'll call within 1 hour.</p>
+    <div class="success-msg" id="success-msg">✅ Demo class booked! Our team will contact you within 1 hour. Check your WhatsApp too.</div>
+  </div>
+</section>
+
+<!-- LOCAL SEO + MAP -->
+<section class="seo-section" id="contact">
+  <div class="seo-inner">
+    <div class="seo-text">
+      <span class="section-tag">Find Us</span>
+      <h2>Best NEET &amp; JEE Coaching Institute in Jaipur</h2>
+      <p>Jaipur Elite NEET &amp; JEE Academy is recognized as one of the best NEET and JEE coaching institutes in Jaipur with a proven record of 500+ NEET selections, 150+ JEE qualifiers, and 10+ years of experience helping students crack competitive exams and get into their dream medical and engineering colleges.</p>
+      <div class="addr-block">
+        <div class="addr-row"><span class="ai">📍</span><div><strong>Address</strong>Bansur,<br>Kotputli, Rajasthan — 301402</div></div>
+        <div class="addr-row"><span class="ai">📞</span><div><strong>Phone</strong><a href="tel:+919785124522" style="color:var(--electric);font-weight:600;">+91 97851 24522</a></div></div>
+        <div class="addr-row"><span class="ai">✉️</span><div><strong>Email</strong><a href="mailto:sach.ent9@gmail.com" style="color:var(--electric);font-weight:600;">sach.ent9@gmail.com</a></div></div>
+        <div class="addr-row"><span class="ai">🕐</span><div><strong>Timings</strong>Mon–Sat: 7:00 AM – 8:00 PM &nbsp;|&nbsp; Sun: 9:00 AM – 1:00 PM</div></div>
+      </div>
+    </div>
+    <div>
+      <div class="map-wrap">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28265.0570791588!2d76.33110792120345!3d27.682310673804363!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396d5c3cbb0379d7%3A0x553127031eff5c0f!2sBansur%2C%20Rajasthan%20301402!5e0!3m2!1sen!2sin!4v1772598922213!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="f-grid">
+    <div>
+      <div class="f-logo">Jaipur Elite <span class="fn">NEET</span> &amp; <span class="fj">JEE</span> Academy</div>
+      <p class="f-tagline">Jaipur's most trusted NEET &amp; JEE coaching institute — 650+ selections, expert faculty, proven results since 2014.</p>
+      <div class="social-row">
+        <a class="s-btn" href="#" title="YouTube" aria-label="YouTube">▶️</a>
+        <a class="s-btn" href="#" title="Instagram" aria-label="Instagram">📸</a>
+        <a class="s-btn" href="#" title="Telegram" aria-label="Telegram">✈️</a>
+        <a class="s-btn" href="https://wa.me/919785124522" title="WhatsApp" aria-label="WhatsApp">💬</a>
+      </div>
+    </div>
+    <div class="f-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#results">Results</a></li>
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#faculty">Faculty</a></li>
+        <li><a href="#lead-form">Book Demo</a></li>
+      </ul>
+    </div>
+    <div class="f-col">
+      <h4>Programs</h4>
+      <ul>
+        <li><a href="#courses">NEET Crash Course</a></li>
+        <li><a href="#courses">NEET 1-Year Program</a></li>
+        <li><a href="#courses">JEE Crash Course</a></li>
+        <li><a href="#courses">JEE 1-Year Program</a></li>
+        <li><a href="#courses">Foundation (11+12)</a></li>
+      </ul>
+    </div>
+    <div class="f-col">
+      <h4>Timings</h4>
+      <div class="f-hours">
+        <div class="hr-row"><span class="dy">Mon – Fri</span><span class="tm">7 AM – 8 PM</span></div>
+        <div class="hr-row"><span class="dy">Saturday</span><span class="tm">7 AM – 8 PM</span></div>
+        <div class="hr-row"><span class="dy">Sunday</span><span class="tm">9 AM – 1 PM</span></div>
+      </div>
+      <div class="open-now">🟢 Open Now — Enroll Today</div>
+    </div>
+  </div>
+  <div class="f-bottom">
+    <span>© 2025 Jaipur Elite NEET &amp; JEE Academy · Bansur, Kotputli, Rajasthan 301402</span>
+    <span><a href="#">Privacy Policy</a> &nbsp;·&nbsp; <a href="#">Terms</a></span>
+  </div>
+</footer>
+
+<script>
+function go(id){document.getElementById(id)?.scrollIntoView({behavior:'smooth'});}
+
+function toggleMenu(){
+  document.getElementById('mob-menu').classList.toggle('open');
+}
+document.addEventListener('click',e=>{
+  const m=document.getElementById('mob-menu');
+  const h=document.getElementById('ham');
+  if(m.classList.contains('open')&&!m.contains(e.target)&&!h.contains(e.target)){
+    m.classList.remove('open');
+  }
+});
+
+function submitForm(){
+  const name=document.getElementById('f-name').value.trim();
+  const phone=document.getElementById('f-phone').value.trim();
+  const cls=document.getElementById('f-class').value;
+  const exam=document.getElementById('f-exam').value;
+  const msg=document.getElementById('f-msg').value.trim();
+
+  if(!name){document.getElementById('f-name').focus();alert('Please enter the student name.');return;}
+  if(!phone||phone.replace(/\D/g,'').length<10){document.getElementById('f-phone').focus();alert('Please enter a valid 10-digit phone number.');return;}
+
+  const s=document.getElementById('success-msg');
+  s.style.display='block';
+  s.scrollIntoView({behavior:'smooth',block:'nearest'});
+
+  ['f-name','f-phone','f-msg'].forEach(id=>document.getElementById(id).value='');
+  document.getElementById('f-class').selectedIndex=0;
+  document.getElementById('f-exam').selectedIndex=0;
+
+  const btn=document.getElementById('f-submit');
+  btn.disabled=true;
+  setTimeout(()=>{btn.disabled=false;s.style.display='none';},9000);
+
+  const waMsg=`Hi! I want to book a Free Demo Class at Jaipur Elite NEET & JEE Academy.%0A%0A👤 Name: ${encodeURIComponent(name)}%0A📱 Phone: ${encodeURIComponent(phone)}%0A🎓 Class: ${encodeURIComponent(cls||'—')}%0A📝 Target Exam: ${encodeURIComponent(exam||'—')}%0A💬 Note: ${encodeURIComponent(msg||'—')}`;
+  setTimeout(()=>window.open(`https://wa.me/919785124522?text=${waMsg}`,'_blank'),700);
+}
+</script>
+</body>
+</html>
